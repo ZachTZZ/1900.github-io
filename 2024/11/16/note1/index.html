@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1900</title>
+    <link rel="stylesheet" href="/css/main.css">
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <header>
+        <nav>
+            <a href="/">主页</a>
+            <a href="/categories">文章</a>
+            <a href="/friends">友人</a>
+            <a href="/about">关于</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="post">
+    <div class="post-container">
+        <h1 class="post-title">我的个人博客</h1>
+        <div class="post-meta">
+            <span class="post-date">
+                <i class="czs-calendar"></i>
+                2024-11-16
+            </span>
+            
+                <span class="post-categories">
+                    <i class="czs-folder"></i>
+                    <a class="post-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+                </span>
+            
+            
+                <span class="post-tags">
+                    <i class="czs-tag"></i>
+                    <a class="post-tag-none-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+                </span>
+            
+        </div>
+        <div class="post-content">
+            <p>在初步调研之后，选择了Hexo来搭建我的个人博客，主要原因是发现了一个很好看的博客主题hhh</p>
+<h2 id="基础Hexo"><a href="#基础Hexo" class="headerlink" title="基础Hexo"></a>基础Hexo</h2><ol>
+<li><p>Git安装：之前安装过了，这里暂且不表</p>
+</li>
+<li><p>Node.js安装：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuqiyun/p/8133904.html">Node.js安装及环境配置之Windows篇 - 刘奇云 - 博客园</a></p>
+<p> 我的Node.js装在了C盘，npm安装的全局模块所在的路径，以及缓存cache的路径则在”D:\node”</p>
+</li>
+<li><p>Hexo安装：<code>npm install hexo-cli -g</code></p>
+</li>
+<li><p>Github:</p>
+<ul>
+<li>Create a new repository:仓库名为1900.github.io</li>
+<li>桌面右击打开Git bash，输入<code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code></li>
+<li>进入C:\Users\用户名，在里面进入.ssh文件用记事本打开里面的id_rsa.pub,全选复制里面的代码</li>
+<li>在github中进入用户设置，找到SSH keys新建SSH keys，粘贴代码然后创建，在git bash中输入<code>ssh -T git@github.com</code>回车后输入yes检查是否成功</li>
+</ul>
+</li>
+<li><p>Blog：</p>
+<ul>
+<li>新建文件Blog，进入文件夹打开gitbash运行<code>hexo init myblog</code>,进入myblog，<code>hexo install</code>，<code>hexo g</code>，<code>hexo s</code>，便生成了基础的hexo界面</li>
+</ul>
+</li>
+</ol>
+<h2 id="将博客上线github"><a href="#将博客上线github" class="headerlink" title="将博客上线github"></a>将博客上线github</h2><ol>
+<li><p>进入myblog文件夹，用记事本打开_config.yml，将deploy后面的全删掉，复制粘贴：</p>
+ <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type<span class="punctuation">:</span> git</span><br><span class="line">repository<span class="punctuation">:</span> https<span class="punctuation">:</span><span class="comment">//github.com/ZachTZZ/1900.github-io</span></span><br><span class="line">branch<span class="punctuation">:</span> main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在gitbash中运行</p>
+<p> <code>npm install hexo-deployer-git --save</code>,自动部署发布工具</p>
+</li>
+<li><p>后在Blog文件夹右键打开git bash，依次输入</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g（生成）</span><br><span class="line">hexo d（上传）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>遇到打开<a target="_blank" rel="noopener" href="http://www.1900.github.io后404的情况/">www.1900.github.io后404的情况</a>:</p>
+<p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/jerry81smile/article/details/132666321">【终于解决了hexo发布到GitHub出现404的问题了】_hexo 上传成功,github无法访问-CSDN博客</a></p>
+</li>
+</ol>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2>
+        </div>
+    </div>
+</article>
+
+
+<nav class="post-nav">
+    
+        <a class="prev" href="/2024/11/16/weekly-1/">
+            <i class="czs-angle-left-l"></i>
+            Weekly1
+        </a>
+    
+    
+</nav>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 1900</p>
+    </footer>
+</body>
+</html>
